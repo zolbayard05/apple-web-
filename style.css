@@ -6,7 +6,7 @@
   font-family: "Inter", serif;
 }
 header {
-  width: 1920px;
+  width: 100vw;
   height: 44px;
   top: 0;
   position: fixed;
@@ -25,7 +25,7 @@ header {
 }
 .header-icons {
   display: flex;
-  gap: 24px;
+  gap: 30px;
 }
 .icon {
   display: flex;
@@ -58,7 +58,6 @@ h2 {
   justify-content: center;
   color: #f5f5f7;
   text-align: center;
-  font-family: "Inter";
   font-size: 52px;
   font-style: normal;
   font-weight: 600;
@@ -70,7 +69,6 @@ p {
   justify-content: center;
   color: #f5f5f7;
   text-align: center;
-  font-family: "Inter";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -136,4 +134,120 @@ button {
   padding: 12px 20px;
   border-radius: 999px;
   border: solid #0071e3 1px;
+}
+.product_container {
+  gap: 12px;
+  display: grid;
+  margin-bottom: 12px;
+  grid-auto-rows: 580px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.product {
+  width: 100%;
+  height: 580px;
+  text-align: center;
+  margin-bottom: 12px;
+  flex-direction: column;
+  background-size: cover;
+  padding-block: 55px 36px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+#product1 {
+  background-image: url(images/product1.jpg);
+}
+#product2 {
+  background-image: url(images/product2.jpg);
+  display: flex;
+  justify-content: flex-end;
+}
+#product3 {
+  background-image: url(images/product3.jpg);
+}
+#product4 {
+  background-image: url(images/product4.jpg);
+}
+#product5 {
+  background-image: url(images/product5.jpg);
+}
+#product6 {
+  background-image: url(images/product6.jpg);
+}
+.ipad_air {
+  width: 144px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.product h2 {
+  color: #000;
+  font-size: 36px;
+  height: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+}
+.product p {
+  color: #000;
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+#product2 h2 {
+  color: #fff;
+}
+#product2 p {
+  color: #fff;
+}
+.series {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+#product5 p {
+  width: 344px;
+  height: 50px;
+}
+#product6 p {
+  width: 344px;
+  height: 50px;
+}
+.media_section {
+  width: 100vw;
+  display: flex;
+  column-gap: 15px;
+  overflow-x: scroll;
+  align-items: center;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.media_slide {
+  height: 668px;
+  width: 1250px;
+  color: white;
+  flex-shrink: 0;
+  font-size: 20px;
+  position: relative;
+  scroll-snap-align: center;
+  background-position: center;
+  background-size: cover;
+}
+.slide_info {
+  left: 47px;
+  bottom: 38px;
+  position: absolute;
+}
+.info_button {
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 11px 21px;
+  margin-right: 14px;
+  border-radius: 999px;
+  background-color: #f5f5f7;
 }
