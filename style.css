@@ -271,52 +271,61 @@ button {
   height: 236px;
 }
 .slide {
-  width: 100%;
+  width: max-content;
   display: flex;
-  position: relative;
-  --quantity: 10;
-  --width: 417px;
-  min-width: calc(var(--width) * var(--quantity));
-  justify-content: space-around;
+  gap: 15px;
+  animation: slide 25s linear infinite;
 }
 .slide_item {
   min-width: 417px;
   height: 236px;
-  animation: slide 60s linear infinite;
-  position: absolute;
-  animation-delay: calc((56.5s / var(--quantity)) * (var(--item) - 6.5));
-  --item: 1;
   background-position: center;
   background-size: cover;
-  display: flex;
 }
 @keyframes slide {
-  0% {
-    left: 100%;
+  from {
+    transform: translateX(0);
   }
-  100% {
-    left: calc(var(--width) * -1);
+  to {
+    transform: translate(-50%);
   }
+}
+.slide:hover {
+  animation-play-state: paused;
+  transition: 0.3s ease-in;
+  filter: brightness(70%);
 }
 #slide-item1 {
   display: flex;
   align-items: center;
   background-color: rgb(20, 40, 56);
+  padding-left: 15px;
+  display: flex;
+  gap: 15px;
 }
 #slide-item2 {
   display: flex;
   align-items: center;
   background-color: #eae6e1;
+  padding-left: 15px;
+  display: flex;
+  gap: 15px;
 }
 #slide-item8 {
   display: flex;
   align-items: center;
   background-color: rgb(64, 13, 14);
+  padding-left: 15px;
+  display: flex;
+  gap: 15px;
 }
 #slide-item10 {
   display: flex;
   align-items: center;
   background-color: rgb(38, 38, 38);
+  padding-left: 15px;
+  display: flex;
+  gap: 15px;
 }
 .image1,
 .image2,
@@ -324,4 +333,17 @@ button {
 .image10 {
   width: 198px;
   height: 198px;
+  border-radius: 10px;
+}
+#slide-item1 p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+#slide-item2 p,
+#slide-item8 p,
+#slide-item10 p {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
 }
