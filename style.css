@@ -6,7 +6,7 @@
   font-family: "Inter", serif;
 }
 header {
-  width: 100vw;
+  width: 100%;
   height: 44px;
   top: 0;
   position: fixed;
@@ -62,7 +62,7 @@ h2 {
   font-style: normal;
   font-weight: 600;
 }
-p {
+.container p {
   display: flex;
   height: 32px;
   flex-direction: column;
@@ -95,7 +95,7 @@ button {
   background-color: transparent;
 }
 .container {
-  width: 100vw;
+  width: 100%;
   height: 692px;
   text-align: center;
   margin-bottom: 12px;
@@ -106,7 +106,7 @@ button {
 }
 .container_gift {
   background-image: url(images/main3.jpg.jpg);
-  width: 100vw;
+  width: 100%;
   height: 692px;
   text-align: center;
   margin-bottom: 12px;
@@ -154,8 +154,15 @@ button {
   display: flex;
   align-items: center;
 }
+.product_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #product1 {
   background-image: url(images/product1.jpg);
+  display: flex;
+  justify-content: space-between;
 }
 #product2 {
   background-image: url(images/product2.jpg);
@@ -182,9 +189,26 @@ button {
   align-items: center;
   margin-bottom: 10px;
 }
+.color_text {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  background: linear-gradient(
+    90deg,
+    #0090f7 0%,
+    #ba62fc 33.33%,
+    #f2416b 66.67%,
+    #f55600 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .product h2 {
   color: #000;
-  font-size: 36px;
+  font-size: 32px;
   height: 44px;
   font-style: normal;
   font-weight: 600;
@@ -216,8 +240,16 @@ button {
   width: 344px;
   height: 50px;
 }
+.logo {
+  display: flex;
+  gap: 8px;
+}
+.apple_logo {
+  width: 26px;
+  height: 32px;
+}
 .media_section {
-  width: 100vw;
+  width: 100%;
   display: flex;
   column-gap: 15px;
   overflow-x: scroll;
@@ -269,33 +301,33 @@ button {
   overflow: hidden;
   padding-top: 12px;
   height: 236px;
+  position: relative;
 }
 .slide {
   width: max-content;
   display: flex;
   gap: 15px;
-  animation: slide 25s linear infinite;
+  animation: slide 60s linear infinite;
+  position: relative;
 }
 .slide_item {
   min-width: 417px;
   height: 236px;
   background-position: center;
   background-size: cover;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 @keyframes slide {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translate(-50%);
+    transform: translateX(calc(-50% - 8px));
   }
 }
-.slide:hover {
-  animation-play-state: paused;
-  transition: 0.3s ease-in;
-  filter: brightness(70%);
-}
-#slide-item1 {
+.slide-item1 {
   display: flex;
   align-items: center;
   background-color: rgb(20, 40, 56);
@@ -303,7 +335,7 @@ button {
   display: flex;
   gap: 15px;
 }
-#slide-item2 {
+.slide-item2 {
   display: flex;
   align-items: center;
   background-color: #eae6e1;
@@ -311,7 +343,7 @@ button {
   display: flex;
   gap: 15px;
 }
-#slide-item8 {
+.slide-item8 {
   display: flex;
   align-items: center;
   background-color: rgb(64, 13, 14);
@@ -319,7 +351,7 @@ button {
   display: flex;
   gap: 15px;
 }
-#slide-item10 {
+.slide-item10 {
   display: flex;
   align-items: center;
   background-color: rgb(38, 38, 38);
@@ -335,15 +367,73 @@ button {
   height: 198px;
   border-radius: 10px;
 }
-#slide-item1 p {
+.slide-item1 p {
   color: white;
   font-size: 16px;
   font-weight: bold;
 }
-#slide-item2 p,
-#slide-item8 p,
-#slide-item10 p {
+.slide-item2 p,
+.slide-item8 p,
+.slide-item10 p {
   color: #000;
   font-size: 16px;
   font-weight: bold;
+}
+.slide_item_info {
+  padding-left: 15px;
+  padding-top: 190px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.224px;
+}
+.slide:hover {
+  animation-play-state: paused;
+}
+.slide:hover .slide_item {
+  filter: grayscale(100%);
+}
+.slide .slide_item:hover {
+  filter: grayscale(0%);
+}
+.slide_item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s ease;
+}
+.slide .slide_item:hover::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+.slide_item:hover .content::after {
+  background: rgba(0, 0, 0, 0);
+}
+.content {
+  position: absolute;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  margin-left: 160px;
+  z-index: 2;
+}
+.content p {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+}
+.slide_item .content {
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.slide_item:hover .content {
+  opacity: 1;
+}
+.content_other {
+  margin-top: 100px;
 }

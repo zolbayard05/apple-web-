@@ -11,7 +11,7 @@
       <div class="header-icon">
         <img src="images/SVG.svg" alt="icon" class="icon" />
       </div>
-      <a href="" class="header-link">Store</a>
+      <a href="store.html" class="header-link">Store</a>
       <span class="header-link">Mac</span>
       <span class="header-link">iPad</span>
       <span class="header-link">iPhone</span>
@@ -56,12 +56,15 @@
     </div>
     <div class="product_container">
       <div class="product" id="product1">
-        <img src="images/ipadair.jpg" alt="ipadair" class="ipad_air" />
-        <p>Two sizes. Faster chip. Does it all.</p>
-        <div class="buttons">
-          <button class="button_left">Learn more</button>
-          <button class="button_right">Buy</button>
+        <div class="product_info">
+          <img src="images/ipadair.jpg" alt="ipadair" class="ipad_air" />
+          <p>Two sizes. Faster chip. Does it all.</p>
+          <div class="buttons">
+            <button class="button_left">Learn more</button>
+            <button class="button_right">Buy</button>
+          </div>
         </div>
+        <div class="color_text">Hello, Apple Intelligence.</div>
       </div>
       <div class="product" id="product2">
         <h2>AirPods Pro 2</h2>
@@ -72,7 +75,10 @@
         </div>
       </div>
       <div class="product" id="product3">
-        <h2>WATCH</h2>
+        <span class="logo"
+          ><img src="images/apple-logo.png.svg" alt="logo" class="apple_logo" />
+          <h2>WATCH</h2></span
+        >
         <p style="margin: 0" class="series">SERIES 10</p>
         <p>Thinstant classic.</p>
         <div class="buttons">
@@ -89,14 +95,21 @@
         </div>
       </div>
       <div class="product" id="product5">
-        <h2>Trade In</h2>
+        <span class="logo"
+          ><img src="images/apple-logo.png.svg" alt="logo" class="apple_logo" />
+          <h2>Trade In</h2></span
+        >
+
         <p>Get $180-$650 in credit when you trade in iPhone 12 or higher.3</p>
         <div class="buttons">
           <button class="button_left">Get your estimate</button>
         </div>
       </div>
       <div class="product" id="product6">
-        <h2>Card</h2>
+        <span class="logo"
+          ><img src="images/apple-logo.png.svg" alt="logo" class="apple_logo" />
+          <h2>Card</h2>
+        </span>
         <p>Get up to 3% DailyCash back with every purchase.</p>
         <div class="buttons">
           <button class="button_left">Learn more</button>
@@ -223,45 +236,94 @@
     </div>
     <div class="slide_section">
       <div class="slide">
-        <div class="slide_item" id="slide-item1">
+        <div class="slide_item slide-item1">
           <img src="images/1 (1).jpg" alt="image" class="image1" />
           <p>R&B Now</p>
+          <div class="content"><p>Listen now</p></div>
         </div>
-        <div class="slide_item" id="slide-item2">
+        <div class="slide_item slide-item2">
           <img src="images/2.jpg" alt="image" class="image2" />
           <p>Today's country</p>
+          <div class="content"><p>Listen now</p></div>
         </div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/3.jpg)"
-        ></div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/4.jpg)"
-        ></div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/5.jpg)"
-        ></div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/6.jpg)"
-        ></div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/7.jpg)"
-        ></div>
-        <div class="slide_item" id="slide-item8">
+        <div class="slide_item" style="background-image: url(images/3.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Football Manager 2024 Touch</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/4.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">6 Weeks to Restart Your Fitness</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/5.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">NBA 2K25 Arcade Edition</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/6.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Strength with Kyle</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/7.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Run your first 5K</div>
+        </div>
+        <div class="slide_item slide-item8">
           <img src="images/8.jpg" alt="image" class="image8" />
           <p>Today's Indie rock</p>
+          <div class="content"><p>Listen now</p></div>
         </div>
-        <div
-          class="slide_item"
-          style="background-image: url(images/9.jpg)"
-        ></div>
-        <div class="slide_item" id="slide-item10">
+        <div class="slide_item" style="background-image: url(images/9.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Hello Kitty Island Adventure</div>
+        </div>
+        <div class="slide_item slide-item10">
           <img src="images/10.jpg" alt="image" class="image10" />
-          <p>Strenght with Kyle</p>
+          <p>Strength with Kyle</p>
+          <div class="content"><p>Listen now</p></div>
+        </div>
+        <!--duplicate -->
+        <div class="slide_item slide-item1">
+          <img src="images/1 (1).jpg" alt="image" class="image1" />
+          <p>R&B Now</p>
+          <div class="content"><p>Listen now</p></div>
+        </div>
+        <div class="slide_item slide-item2">
+          <img src="images/2.jpg" alt="image" class="image2" />
+          <p>Today's country</p>
+          <div class="content"><p>Listen now</p></div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/3.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Football Manager 2024 Touch</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/4.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">6 Weeks to Restart Your Fitness</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/5.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">NBA 2K25 Arcade Edition</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/6.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Strength with Kyle</div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/7.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Run your first 5K</div>
+        </div>
+        <div class="slide_item slide-item8">
+          <img src="images/8.jpg" alt="image" class="image8" />
+          <p>Today's Indie rock</p>
+          <div class="content"><p>Listen now</p></div>
+        </div>
+        <div class="slide_item" style="background-image: url(images/9.jpg)">
+          <div class="content content_other"><p>Listen now</p></div>
+          <div class="slide_item_info">Hello Kitty Island Adventure</div>
+        </div>
+        <div class="slide_item slide-item10">
+          <img src="images/10.jpg" alt="image" class="image10" />
+          <p>Strength with Kyle</p>
+          <div class="content"><p>Listen now</p></div>
         </div>
       </div>
     </div>
