@@ -65,9 +65,8 @@ body {
   font-weight: 400;
   background-color: #fff;
 }
-
 .gradient-header {
-  width: 100%;
+  width: 100vw;
 }
 
 .store-container {
@@ -150,6 +149,7 @@ body {
   display: flex;
   margin-bottom: 60px;
   padding-inline: 140px;
+  column-gap: 20px;
 }
 
 .product-card {
