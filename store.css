@@ -192,6 +192,7 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   position: relative;
+  scrollbar-width: none;
 }
 
 .section-1-products .product-card {
